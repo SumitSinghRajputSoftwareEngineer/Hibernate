@@ -10,9 +10,11 @@
 		<property name="connection.username">root</property>
 		<property name="connection.password"></property>
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-		<property name="hbm2ddl.auto">update</property> 
+		<property name="hbm2ddl.auto">create</property> 
 		<property name="show_sql">true</property>
 		<mapping class="hiber.tut.Student"/>
 		<mapping class="hiber.tut.Address"/>
+		<mapping class="hiber.map.Answer"/>
+		<mapping class="hiber.map.Question"/>
 	</session-factory>
 </hibernate-configuration>

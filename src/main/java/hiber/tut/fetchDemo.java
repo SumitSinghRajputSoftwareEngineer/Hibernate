@@ -8,6 +8,7 @@ public class fetchDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//fetch and load
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();

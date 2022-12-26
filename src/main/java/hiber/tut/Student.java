@@ -15,11 +15,22 @@ public class Student {
 	
 	private String city;
 	
+	private Certificate certi;
+	
 	public Student(int id, String name, String city) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.city = city;
+		
+	}
+
+	public Student(int id, String name, String city, Certificate certi) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.city = city;
+		this.certi = certi;
 	}
 
 	public Student() {
@@ -49,6 +60,16 @@ public class Student {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+	
+	
+	
+	public Certificate getCerti() {
+		return certi;
+	}
+
+	public void setCerti(Certificate certi) {
+		this.certi = certi;
 	}
 
 	@Override
