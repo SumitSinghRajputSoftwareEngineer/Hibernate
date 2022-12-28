@@ -14,34 +14,41 @@ public class MapDemo {
 		SessionFactory factory = cfg.buildSessionFactory();
 		
 		//creating question object
-		Question question1 = new Question();
-		question1.setQuestionId(1212);
-		question1.setQuestion("What is Java ?");
-		//creating answer object
-		Answer answer1 = new Answer();
-		answer1.setAnswerId(343);
-		answer1.setAnswer("Java is a programming language.");
-		answer1.setQuestion(question1);
-		
-		Answer answer2 = new Answer();
-		answer2.setAnswerId(344);
-		answer2.setAnswer("Java is part of Oracle");
-		answer2.setQuestion(question1);
-		
-		Answer answer3 = new Answer();
-		answer3.setAnswerId(345);
-		answer3.setAnswer("With the help of Java web development is possible.");
-		answer3.setQuestion(question1);
-		
-		
+//		Question question1 = new Question();
+//		question1.setQuestionId(1212);
+//		question1.setQuestion("What is Java ?");
+//		//creating answer object
+//		Answer answer1 = new Answer();
+//		answer1.setAnswerId(343);
+//		answer1.setAnswer("Java is a programming language.");
+//		answer1.setQuestion(question1);
+//		
+//		Answer answer2 = new Answer();
+//		answer2.setAnswerId(344);
+//		answer2.setAnswer("Java is part of Oracle");
+//		answer2.setQuestion(question1);
+//		
+//		Answer answer3 = new Answer();
+//		answer3.setAnswerId(345);
+//		answer3.setAnswer("With the help of Java web development is possible.");
+//		answer3.setQuestion(question1);
+//		
+////		
 		Session session = factory.openSession();
-		Transaction tx =  session.beginTransaction();
-		session.save(question1);
-		session.save(answer1);
-		session.save(answer2);
-		session.save(answer3);
-		tx.commit();
+//		Transaction tx =  session.beginTransaction();
+//		session.save(question1);
+//		session.save(answer1);
+//		session.save(answer2);
+//		session.save(answer3);
+//		tx.commit();
 //		session.getTransaction().commit();
+		
+		
+		Question question = (Question)session.get(Question.class, 1212);
+		System.out.println(question.getQuestion());
+		for(Answer ans : question.getAnswer()) {
+			System.out.println(ans.getAnswerId() + " " + ans.getAnswer());
+		}
 		
 		session.close();
 		factory.close();
