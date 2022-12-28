@@ -16,5 +16,7 @@
 		<mapping class="hiber.tut.Address"/>
 		<mapping class="hiber.map.Answer"/>
 		<mapping class="hiber.map.Question"/>
+		<mapping class="hiber.map1.Emp"/>
+		<mapping class="hiber.map1.Project"/>
 	</session-factory>
 </hibernate-configuration>
