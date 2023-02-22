@@ -1,12 +1,18 @@
 package hiber.tut;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 //import javax.persistence.Table;
 
 //Table name will be changed to mystudent
 //@Table(name="mystudents")
 @Entity
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Student {
 	@Id
 	private int id;
