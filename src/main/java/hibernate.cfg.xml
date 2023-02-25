@@ -22,5 +22,7 @@
 		<mapping class="hiber.map.Question"/>
 		<mapping class="hiber.map1.Emp"/>
 		<mapping class="hiber.map1.Project"/>
+		
+		<mapping resource="hiber/mapping/xml/Person.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
